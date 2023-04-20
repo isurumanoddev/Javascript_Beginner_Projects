@@ -1,0 +1,58 @@
+body {
+    background: black;
+    color: aliceblue;
+}
+
+.container {
+    margin: 10px 100px;
+}
+.squares {
+    padding: 10px 20px;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+
+}
+.colorSquares {
+    border: 4px solid #ffffff;
+    background: #eacf0e;
+    /*padding: 2px 30px;*/
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 5px;
+    font-family: Bahnschrift, serif;
+    font-size: 40px;
+    border-radius: 20px;
+
+}
+
+#green {
+    background: #358b00;
+
+}#orange {
+    background: orange;
+
+}
+
+#purple {
+
+    background: #e552de;
+
+}
+.information {
+    text-align: center;
+
+}
+#clear {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    padding: 10px;
+    font-size: larger;
+    border-radius: 20px;
+}
+#clear:hover {
+  background-color: #e31b1b;
+  color: #f5e9e9;
+}
