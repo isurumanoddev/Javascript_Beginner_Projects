@@ -1,0 +1,61 @@
+* {
+    font-family: 'M PLUS Rounded 1c', Avenir Next, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background: #4d3862;
+}
+
+.wrapper {
+    width: 500px;
+    height: 600px;
+    color: white;
+    background: #272639;
+    border-radius: 1rem;
+    padding: 25px;
+    margin: 100px auto;
+    text-align: center;
+
+}
+
+.container {
+    width: 100%;
+    /*background: #358b00;*/
+}
+
+.container img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+
+    border-radius: 1rem;
+
+}
+
+#clear {
+    border: 4px solid #ffffff;
+    background: #000000;
+    /*padding: 2px 30px;*/
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 15px auto;;
+    font-size: 45px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#clear:hover {
+
+    border: 4px solid #d56d6d;
+    color: #f5e9e9;
+
+}
+
+.result-container {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
