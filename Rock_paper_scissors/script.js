@@ -22,14 +22,15 @@ function getResult(playerChoice, computerChoice) {
     return score
 
 }
-const totalScore = {"Computer Score":0,"Player Score":0}
+
+const totalScore = {"Computer Score": 0, "Player Score": 0}
 
 function showResult(score, playerChoice, computerChoice) {
-    let winner ;
+    let winner;
     if (score === 1) {
         totalScore["Player Score"] += 1
         winner = "You Win The Game !"
-    }else if (score === -1) {
+    } else if (score === -1) {
         winner = "Computer Win The Game !";
         totalScore["Computer Score"] += 1
     } else {
@@ -38,8 +39,8 @@ function showResult(score, playerChoice, computerChoice) {
     console.log(totalScore)
     playerScore.innerText = winner
 
-    resultWinner1.innerText ="Computer Score :" + totalScore["Computer Score"]
-    resultWinner2.innerText ="Player Score :" + totalScore["Player Score"]
+    resultWinner1.innerText = "Computer Score :" + totalScore["Computer Score"]
+    resultWinner2.innerText = "Player Score :" + totalScore["Player Score"]
 
 }
 
@@ -48,22 +49,17 @@ const clickedItem = document.querySelectorAll(".rpsButton")
 const playerScore = document.getElementById("player-score")
 const resultWinner1 = document.getElementById("result");
 const resultWinner2 = document.getElementById("hands");
-
-
+const reset = document.getElementById("clear");
 
 
 function onClickRPS(playerChoice) {
     // console.log({playerChoice})
     let computerChoice = getComputerChoice();
     // console.log({computerChoice})
-    const result = getResult(playerChoice,computerChoice);
+    const result = getResult(playerChoice, computerChoice);
     // console.log({result})
-    
-    showResult(result,playerChoice,computerChoice)
-    
-    
-    
-    
+
+    showResult(result, playerChoice, computerChoice)
 
 
 }
@@ -76,6 +72,12 @@ function playGame() {
 
         };
     })
+    reset.onclick = () => {
+
+        totalScore["Computer Score"] = 0
+        totalScore["Player Score"] = 0
+        location.reload();
+    }
 }
 
 playGame()
