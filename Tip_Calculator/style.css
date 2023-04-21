@@ -34,15 +34,22 @@ body {
 }
 
 .inputContainer {
-    background: #358b00;
+      background: #353959;
     padding: 0 14px;
     display: flex;
     align-items: center;
+    border-radius:15px ;
+
 
 }
 
 #billTotalInput, #TipInput {
     font-size: 20px;
+    border: none;
+  outline: none;
+    background: none;
+
+
 
 }
 
