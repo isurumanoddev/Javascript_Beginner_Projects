@@ -3,25 +3,23 @@ let purpleSquare = document.getElementById("purple");
 let orangeSquare = document.getElementById("orange");
 let clearButton = document.getElementById("clear");
 
-const sqaures = document.querySelectorAll(".colorSquares");
+const squares = document.querySelectorAll(".colorSquares");
 
-const clickTimes = { purple: 0, green:0, orange: 0}
-sqaures.forEach(square => {
+const timesClicked = { "green":0,"purple":0,"orange":0,}
+squares.forEach(square => {
 
     square.onclick = () => {
         console.log(square.value);
-        clickTimes[square.value] += 1;
-        square.innerText = clickTimes[square.value]
-    };
-
+        timesClicked[square.value] += 1;
+        square.innerText = timesClicked[square.value]
+    }
 });
 
-clearButton.onclick = () => clearScore()
+clearButton.onclick = () => {
+    squares.forEach(square =>{
 
-function clearScore() {
-    console.log("clear")
-    sqaures.forEach(square => {
-        square.innerHTML = ""
-        clickTimes[square.value] = 0;
-    });
-}
+        timesClicked[square.value] = 0;
+        square.innerText = ""
+
+    })
+};

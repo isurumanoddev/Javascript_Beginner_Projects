@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tip Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet"/>
+
+
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="container" id="top">
+        <div class="title">Bill total</div>
+        <div class="inputContainer">
+            <span>$</span>
+            <input type="text" id="billTotalInput" placeholder="0.00">
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title">Tip</div>
+        <div class="inputContainer">
+            <span>%</span>
+            <input type="text" id="TipInput" placeholder="0.00">
+
+        </div>
+    </div>
+
+    <div class="container" id="bottom">
+        <div class="split-container">
+            <div class="title">People</div>
+            <div class="controls">
+                <div class="button-container">
+                    <button class="split-button">
+                        <span class="buttonText">+</span>
+                    </button>
+                </div>
+                <span class="split-amount" id="numberOfPeople">1</span>
+                <div class="button-container">
+                    <button class="split-button">
+                        <span class="buttonText">-</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="totalContainer">
+            <div class="title">Total per Person</div>
+            <div class="total" id="perPersonTotal">$0.00</div>
+        </div>
+
+    </div>
+
+
+    <!--<div class="container">-->
+    <!--    <div class="form-container">-->
+    <!--        <form id="form">-->
+    <!--            <div class="form-group">-->
+    <!--                <label>Bill Total</label>-->
+    <!--                <input type="number" class="form-control">-->
+
+    <!--            </div>-->
+    <!--            <div class="form-group">-->
+    <!--                <label>Tip</label>-->
+    <!--                <input type="number" class="form-control">-->
+
+    <!--            </div>-->
+    <!--            <div class="buttons-group">-->
+    <!--                <div>-->
+    <!--                    <p class="label">People</p>-->
+    <!--                    <button class="button">+</button>-->
+    <!--                    <label class="label">1</label>-->
+    <!--                    <button class="button">-</button>-->
+    <!--                </div>-->
+    <!--                <div>-->
+    <!--                    <p class="label">People</p>-->
+    <!--                    <button class="button">+</button>-->
+    <!--                    <label>1</label>-->
+    <!--                    <button class="button">-</button>-->
+    <!--                </div>-->
+
+
+    <!--            </div>-->
+    <!--        </form>-->
+    <!--    </div>-->
+
+    <!--</div>-->
+
+
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
