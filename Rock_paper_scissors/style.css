@@ -1,0 +1,82 @@
+* {
+    font-family: 'M PLUS Rounded 1c', Avenir Next, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background: #8990ec;
+}
+
+.wrapper {
+    width: 360px;
+    height: 550px;
+    color: white;
+    background: #272639;
+    border-radius: 1rem;
+    padding: 15px;
+    margin: 100px auto;
+
+}
+
+.container {
+    width: 600px;
+    /*margin: auto;*/
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px auto;
+}
+
+.squares {
+    padding: 10px 20px;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.colorSquares {
+    border: 4px solid #ffffff;
+    background: #000000;
+    /*padding: 2px 30px;*/
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    font-size: 45px;
+    cursor: pointer;
+
+
+    border-radius: 20px;
+
+}
+
+
+.information {
+    text-align: center;
+
+}
+
+#clear {
+    border: 4px solid #ffffff;
+    background: #000000;
+    /*padding: 2px 30px;*/
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 5px;
+    font-size: 45px;
+
+    border-radius: 20px;
+}
+
+#clear:hover {
+
+    border: 4px solid #f30a0a;
+    color: #f5e9e9;
+}
+
+.result-container {
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
