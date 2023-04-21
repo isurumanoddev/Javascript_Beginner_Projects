@@ -17,7 +17,7 @@
         <div class="title">Bill total</div>
         <div class="inputContainer">
             <span>$</span>
-            <input type="text" id="billTotalInput" placeholder="0.00">
+            <input type="text" id="billTotalInput" placeholder="0.00" onkeyup="calculateBill()">
 
         </div>
     </div>
@@ -26,7 +26,7 @@
         <div class="title">Tip</div>
         <div class="inputContainer">
             <span>%</span>
-            <input type="text" id="TipInput" placeholder="0.00">
+            <input type="text" id="TipInput" placeholder="0.00" onkeyup="calculateBill()">
 
         </div>
     </div>
@@ -36,13 +36,13 @@
             <div class="title">People</div>
             <div class="controls">
                 <div class="button-container">
-                    <button class="split-button">
+                    <button  class="split-button" onclick="increasePeople()">
                         <span class="buttonText">+</span>
                     </button>
                 </div>
-                <span class="split-amount" id="numberOfPeople">1</span>
+                <span id="numberOfPeople" class="split-amount">1</span>
                 <div class="button-container">
-                    <button class="split-button">
+                    <button class="split-button" onclick="decreasePeople()">
                         <span class="buttonText">-</span>
                     </button>
                 </div>
