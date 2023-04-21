@@ -1,23 +1,27 @@
 const billTotal = document.getElementById("billTotalInput")
 const tipAmount = document.getElementById("TipInput")
-const PersonTotal = document.getElementById("perPersonTotal")
+const perPersonTotal = document.getElementById("perPersonTotal")
 const peoples = document.getElementById("numberOfPeople")
 
 
 let peopleAmount = 1
 
 const calculateBill = () => {
-    let inputValue = Number(billTotal.value);
-    let tipValue = Number(tipAmount.value);
-    let total = inputValue * (tipValue/100)
+    const totalValue = Number(billTotal.value);
+    const tipPercent = Number(tipAmount.value)/100;
+    const totalTip =  totalValue * tipPercent
+    const totalBill = totalTip + totalValue
+    const  personTotal = totalBill / peopleAmount
 
+    console.log("personTotal : ",personTotal)
+    perPersonTotal.innerText = `$ ${personTotal.toFixed(2)}`
 
-    console.log("total :",total)
 };
 
 const increasePeople = () => {
     peopleAmount += 1
     peoples.innerText = peopleAmount
+    calculateBill()
 
 };
 
@@ -27,5 +31,6 @@ const decreasePeople = () => {
         peopleAmount -= 1
     }
     peoples.innerText = peopleAmount;
+    calculateBill()
 
 };
