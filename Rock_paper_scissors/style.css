@@ -67,16 +67,19 @@ body {
 .result-container {
     text-align: center;
     margin-top: 20px;
+
 }
 .player-scores {
     display: flex;
     justify-content: space-between;
-    margin: 15px 20px;
-    font-size: 20px;
+    margin: 15px auto;
+    font-size: 21px;
     color: yellow;
+    font-weight: bolder;
 
 }
 #player-score {
-    font-size: 25px;
-    font-family:  Avenir Next, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    margin: 0.8rem;
+    font-weight: bolder;
 }
