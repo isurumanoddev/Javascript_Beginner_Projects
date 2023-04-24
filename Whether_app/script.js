@@ -1,83 +1,57 @@
-function getComputerChoice() {
-    const rps = ["Scissors", "Paper", "Rock"]
-    const random = Math.floor(Math.random() * rps.length)
-    return rps[random]
+// const cityWhether = document.getElementById("cityName");
+// const cloud = document.getElementById("cloud");
+// const country = document.getElementById("country");
+// const temp = document.getElementById("temp");
+// const wind = document.getElementById("wind");
+// const humidity = document.getElementById("humidity");
 
-}
+const getWhether = async (city) => {
+    const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=$${city}`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/octet-stream',
+            'X-RapidAPI-Key': '83134f5537msh46512d6c641c588p15ab8ajsn26af73dc3fc3',
+            'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+        }
+    };
 
-let score;
 
-function getResult(playerChoice, computerChoice) {
-    if (playerChoice === computerChoice) {
-        score = 0;
-    } else if (playerChoice === "Rock" && computerChoice === "Scissors") {
-        score = 1
-    } else if (playerChoice === "Paper" && computerChoice === "Rock") {
-        score = 1
-    } else if (playerChoice === "Scissors" && computerChoice === "Paper") {
-        score = 1;
-    } else {
-        score = -1;
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        showWhetherData(result)
+        // console.log(result)
+
+        // console.log("City :", result.location["name"]);
+        // console.log("Country :", result.location["country"]);
+        // console.log("Temp :", result.current["temp_c"]);
+        // console.log("Wind Speed :", result.current["wind_kph"]);
+        // console.log("Humidity: :", result.current["humidity"]);
+        // console.log("Cloud: :", result["current"]["condition"].text);
+
+
+    } catch (error) {
+        console.error(error);
     }
-    return score
-
-}
-
-const totalScore = {"Computer Score": 0, "Player Score": 0}
-
-function showResult(score, playerChoice, computerChoice) {
-    let winner;
-    if (score === 1) {
-        totalScore["Player Score"] += 1
-        winner = "You Win The Game !"
-    } else if (score === -1) {
-        winner = "Computer Win The Game !";
-        totalScore["Computer Score"] += 1
-    } else {
-        winner = "Game Drawn !"
-    }
-    console.log(totalScore)
-    playerScore.innerText = winner
-
-    resultWinner1.innerText = "Computer Score :" + totalScore["Computer Score"]
-    resultWinner2.innerText = "Player Score :" + totalScore["Player Score"]
-
-}
-
-const clickedItem = document.querySelectorAll(".rpsButton")
-
-const playerScore = document.getElementById("player-score")
-const resultWinner1 = document.getElementById("result");
-const resultWinner2 = document.getElementById("hands");
-const reset = document.getElementById("clear");
-
-
-function onClickRPS(playerChoice) {
-    // console.log({playerChoice})
-    let computerChoice = getComputerChoice();
-    // console.log({computerChoice})
-    const result = getResult(playerChoice, computerChoice);
-    // console.log({result})
-
-    showResult(result, playerChoice, computerChoice)
 
 
 }
 
-function playGame() {
-    clickedItem.forEach((item) => {
-        item.onclick = () => {
 
-            onClickRPS(item.value)
 
-        };
-    })
-    reset.onclick = () => {
 
-        totalScore["Computer Score"] = 0
-        totalScore["Player Score"] = 0
-        location.reload();
-    }
-}
+// cityWhether.innerText = result[0]
+// cityWhether.innerText = "kegalle"
+// cloud.innerText = result["current"]["condition"].text
+// country.innerText = result.location["country"]
+// temp.innerText = result.current["temp_c"]
+// wind.innerText = result.current["wind_kph"]
+// humidity.innerText = result.current["humidity"]
 
-playGame()
+// data.City = result.location["name"]
+// data.Country = result.location["country"]
+// data.Temp = result.current["temp_c"]
+// data.Wind_Speed = result.current["wind_kph"]
+// data.Humidity = result.current["humidity"]
+// data.Cloud = result["current"]["condition"].tex
