@@ -4,7 +4,22 @@
 // const temp = document.getElementById("temp");
 // const wind = document.getElementById("wind");
 // const humidity = document.getElementById("humidity");
+const whetherInput = document.getElementById("whetherInput");
+// const searchInput = document.getElementById("city")
+// let data = {City: null, Country: "", Temp: "", Wind_Speed: "", Humidity: "", Cloud: "",}
 
+
+// const searchButton = document.getElementById("Button");
+
+const searchCity = async () => {
+    const cityName = whetherInput.value;
+    getWhether(cityName).then(value => console.log("value :", value))
+
+
+    // console.log("cityName :", cityName)
+
+
+}
 const getWhether = async (city) => {
     const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=$${city}`;
     const options = {
@@ -38,7 +53,17 @@ const getWhether = async (city) => {
 
 }
 
+const showWhetherData = (whetherData) => {
 
+    // console.log("whetherData : ",whetherData.location["name"])
+    document.getElementById("cityName").innerText = whetherData.location["name"]
+    document.getElementById("cloud").innerText = whetherData["current"]["condition"].text
+    document.getElementById("country").innerText = whetherData.location["country"]
+    document.getElementById("temp").innerText = whetherData.current["temp_c"]
+    document.getElementById("wind").innerText = whetherData.current["wind_kph"]
+    document.getElementById("humidity").innerText = whetherData.current["humidity"]
+
+};
 
 
 // cityWhether.innerText = result[0]
