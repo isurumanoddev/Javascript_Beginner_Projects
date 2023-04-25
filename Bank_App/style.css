@@ -62,50 +62,46 @@ p {
     font-size: 25px;
     border-radius: 8px;
     background: #4d3862;
+    color: white;
 }
 
 .btn-warning {
     background-color: yellow;
-  color: black;
-  padding: 5px 20px;
-  border-radius: 5px;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 5px;
     width: 150px;
     font-size: 25px;
 
 }
 
 .result-container {
-    border: 1px solid white;
+
     margin: 10px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     background: none;
+    color: white;
     /*border: 1px solid;*/
     /*padding: 10px;*/
 
 
-
 }
 
-.card-header {
+#card-header {
     background: none;
     flex-basis: 20%;
-
+    font-size: 20PX;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    color: #21202f;
+    color: #e6e6e7;
+    display: none;
 }
 
-.card-body {
-    background: none;
-    flex-basis: 80%;
-    color: #f5e9e9;
-    border: 1px solid white;
-}
 
 #inputLabel {
-    margin:20px 50px 0 0;
+    margin: 20px 50px 0 0;
     display: block;
     text-align: start;
     color: white;
@@ -114,3 +110,8 @@ p {
 }
 
 
+.btn-primary {
+    display: none;
+    margin: 5px auto;
+    width: 30%;
+}
