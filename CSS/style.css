@@ -1,0 +1,34 @@
+* {
+    font-family: 'M PLUS Rounded 1c', Avenir Next, Helvetica, sans-serif;
+
+}
+
+body {
+    background: #110d38;
+    color: white;
+    font-size: 16px;
+}
+a {
+    color: #93AEBF;
+}
+.main-container {
+    border: 2px solid white;
+    margin: 10px;
+    height: 700px;
+    padding: 15px 30px;
+}
+.main-container h1 {
+    padding: 15px 0;
+}
+.image-container{
+    width: 250px;
+    height: 250px;
+    background: #358b00;
+    border-radius: 10px;
+}
+.image-container img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}

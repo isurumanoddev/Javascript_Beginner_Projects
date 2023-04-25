@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="main-container">
+    <h1>Bank App</h1>
+    <div class="wrapper">
+
+        <div class="search-container">
+            <button type="button"   value="withdraw" class="btn-warning" onclick="">Withdraw</button>
+            <button type="button"  value="deposit" class="btn-warning" onclick="">Deposit</button>
+            <button type="button"  value="balance" class="btn-warning" onclick="">Balance</button>
+
+            <label id="inputLabel"></label>
+            <input id="inputAmount" class="form-control" type="number" style="display:none">
+            <button type="button"  id="EnterButton" class="btn btn-dark" onclick="searchCity()" style="display:none">Enter</button>
+        </div>
+        <div class="result-container">
+
+            <div class="card-header">
+                <h2 id="cityName">-----</h2>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

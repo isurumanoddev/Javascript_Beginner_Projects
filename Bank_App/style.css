@@ -1,0 +1,116 @@
+* {
+    font-family: 'M PLUS Rounded 1c', Avenir Next, Helvetica, sans-serif;
+
+}
+
+body {
+    background: #050549;
+}
+
+h1 {
+    font-size: 60px;
+
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #f69703;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+p {
+    margin: 0;
+    font-size: 20px;
+    padding: 0;
+}
+
+.main-container {
+    text-align: center;
+}
+
+.wrapper {
+    width: fit-content;
+    height: fit-content;
+    color: #000000;
+    background: none;
+    border-radius: 1rem;
+    background: #4d3862;
+    margin: 10px auto;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.search-container {
+
+    margin: 10px;
+
+}
+
+.form-control {
+
+    margin: 10px auto;
+    border: 1px solid #cedad0;
+    font-size: 25px;
+    border-radius: 8px;
+    background: #4d3862;
+}
+
+.btn-warning {
+    background-color: yellow;
+  color: black;
+  padding: 5px 20px;
+  border-radius: 5px;
+    width: 150px;
+    font-size: 25px;
+
+}
+
+.result-container {
+    border: 1px solid white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: none;
+    /*border: 1px solid;*/
+    /*padding: 10px;*/
+
+
+
+}
+
+.card-header {
+    background: none;
+    flex-basis: 20%;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #21202f;
+}
+
+.card-body {
+    background: none;
+    flex-basis: 80%;
+    color: #f5e9e9;
+    border: 1px solid white;
+}
+
+#inputLabel {
+    margin:20px 50px 0 0;
+    display: block;
+    text-align: start;
+    color: white;
+    font-size: 20px;
+
+}
+
+
